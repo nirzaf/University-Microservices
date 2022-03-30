@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <GenerateRuntimeConfigurationFiles>True</GenerateRuntimeConfigurationFiles>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\University.Departments.Application\University.Departments.Application.csproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Folder Include="Migrations"/>
+    </ItemGroup>
+
+</Project>

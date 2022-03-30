@@ -1,0 +1,33 @@
+version: "3.7"
+
+services:
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    restart: unless-stopped
+    ports:
+      - 5672:5672
+      - 15672:15672
+    networks:
+      - university
+
+  db:
+    container_name: sqldb
+    image: mcr.microsoft.com/mssql/server:2017-latest
+    restart: unless-stopped
+    ports:
+      - "1433:1433"
+    environment:
+      SA_PASSWORD: "@Aa123456"
+      ACCEPT_EULA: "Y"
+    networks:
+      - university
+
+networks:
+  university:
+    name: university
+
+volumes:
+  db-data:
+    external: false

@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\University.Identity.Application\University.Identity.Application.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Configurations" />
+    </ItemGroup>
+</Project>
